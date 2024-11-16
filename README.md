@@ -1,30 +1,30 @@
-# Create Strve App
+# Create-amazed-app
 
-A set of fast building Strve.js project command line tool.
+A set of fast building amazed.js project command line tool.
 
-## Scaffolding Your First Strve Project
+## Scaffolding Your First Amazed Project
 
 **NPM**
 
 ```bash
-npm create strve-app@latest
+npm create amazed-app@latest
 ```
 
 **Yarn**
 
 ```bash
-yarn create strve-app
+yarn create amazed-app
 ```
 
 **PNPM**
 
 ```bash
-pnpm create strve-app
+pnpm create amazed-app
 ```
 
 ## Documentation
 
-To learn more about CreateStrveApp, check [its documentation](https://strvejs.github.io/strve-doc/tool/createStrveApp/).
+To learn more about create-amazed-app, check [its documentation](https://maomincoding.github.io/amazed-doc/tool/createAmazedApp/).
 
 ## License
 

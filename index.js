@@ -1,36 +1,36 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const argv = require("minimist")(process.argv.slice(2), { string: ["_"] });
-const prompts = require("prompts");
-const { yellow, red, lightYellow, cyan } = require("kolorist");
+const fs = require('fs');
+const path = require('path');
+const argv = require('minimist')(process.argv.slice(2), { string: ['_'] });
+const prompts = require('prompts');
+const { yellow, red, lightYellow, cyan } = require('kolorist');
 
 const cwd = process.cwd();
 
 const FRAMEWORKS = [
   {
-    name: "create-strve-app",
+    name: 'create-amazed-app',
     color: yellow,
     variants: [
       {
-        name: "strve",
-        display: "JavaScript",
+        name: 'amazed',
+        display: 'JavaScript',
         color: lightYellow,
       },
       {
-        name: "strve-apps",
-        display: "JavaScript",
+        name: 'amazed-apps',
+        display: 'JavaScript',
         color: lightYellow,
       },
       {
-        name: "strve-jsx",
-        display: "JavaScript",
+        name: 'amazed-jsx',
+        display: 'JavaScript',
         color: cyan,
       },
       {
-        name: "strve-jsx-apps",
-        display: "JavaScript",
+        name: 'amazed-jsx-apps',
+        display: 'JavaScript',
         color: cyan,
       },
     ],
@@ -42,14 +42,14 @@ const TEMPLATES = FRAMEWORKS.map(
 ).reduce((a, b) => a.concat(b), []);
 
 const renameFiles = {
-  _gitignore: ".gitignore",
+  _gitignore: '.gitignore',
 };
 
 async function init() {
   let targetDir = argv._[0];
   let template = argv.template || argv.t;
 
-  const defaultProjectName = !targetDir ? "strve-project" : targetDir;
+  const defaultProjectName = !targetDir ? 'amazed-project' : targetDir;
 
   let result = {};
 
@@ -57,48 +57,43 @@ async function init() {
     result = await prompts(
       [
         {
-          type: targetDir ? null : "text",
-          name: "projectName",
-          message: "Project name:",
+          type: targetDir ? null : 'text',
+          name: 'projectName',
+          message: 'Project name:',
           initial: defaultProjectName,
-          onState: (state) =>
-            (targetDir = state.value.trim() || defaultProjectName),
+          onState: (state) => (targetDir = state.value.trim() || defaultProjectName),
         },
         {
-          type: () =>
-            !fs.existsSync(targetDir) || isEmpty(targetDir) ? null : "confirm",
-          name: "overwrite",
+          type: () => (!fs.existsSync(targetDir) || isEmpty(targetDir) ? null : 'confirm'),
+          name: 'overwrite',
           message: () =>
-            (targetDir === "."
-              ? "Current directory"
-              : `Target directory "${targetDir}"`) +
+            (targetDir === '.' ? 'Current directory' : `Target directory "${targetDir}"`) +
             ` is not empty. Remove existing files and continue?`,
         },
         {
           // @ts-ignore
           type: (_, { overwrite } = {}) => {
             if (overwrite === false) {
-              throw new Error(red("✖") + " Operation cancelled");
+              throw new Error(red('✖') + ' Operation cancelled');
             }
             return null;
           },
-          name: "overwriteChecker",
+          name: 'overwriteChecker',
         },
         {
-          type: () => (isValidPackageName(targetDir) ? null : "text"),
-          name: "packageName",
-          message: "Package name:",
+          type: () => (isValidPackageName(targetDir) ? null : 'text'),
+          name: 'packageName',
+          message: 'Package name:',
           initial: () => toValidPackageName(targetDir),
-          validate: (dir) =>
-            isValidPackageName(dir) || "Invalid package.json name",
+          validate: (dir) => isValidPackageName(dir) || 'Invalid package.json name',
         },
         {
-          type: template && TEMPLATES.includes(template) ? null : "select",
-          name: "framework",
+          type: template && TEMPLATES.includes(template) ? null : 'select',
+          name: 'framework',
           message:
-            typeof template === "string" && !TEMPLATES.includes(template)
+            typeof template === 'string' && !TEMPLATES.includes(template)
               ? `"${template}" isn't a valid template. Please choose from below: `
-              : "Select a framework:",
+              : 'Select a framework:',
           initial: 0,
           choices: FRAMEWORKS.map((framework) => {
             const frameworkColor = framework.color;
@@ -109,10 +104,9 @@ async function init() {
           }),
         },
         {
-          type: (framework) =>
-            framework && framework.variants ? "select" : null,
-          name: "variant",
-          message: "Select a variant:",
+          type: (framework) => (framework && framework.variants ? 'select' : null),
+          name: 'variant',
+          message: 'Select a variant:',
           // @ts-ignore
           choices: (framework) =>
             framework.variants.map((variant) => {
@@ -126,7 +120,7 @@ async function init() {
       ],
       {
         onCancel: () => {
-          throw new Error(red("✖") + " Operation cancelled");
+          throw new Error(red('✖') + ' Operation cancelled');
         },
       }
     );
@@ -165,7 +159,7 @@ async function init() {
   };
 
   const files = fs.readdirSync(templateDir);
-  for (const file of files.filter((f) => f !== "package.json")) {
+  for (const file of files.filter((f) => f !== 'package.json')) {
     write(file);
   }
 
@@ -173,20 +167,19 @@ async function init() {
 
   pkg.name = packageName || targetDir;
 
-  write("package.json", JSON.stringify(pkg, null, 2));
+  write('package.json', JSON.stringify(pkg, null, 2));
 
   const pkgInfo = pkgFromUserAgent(process.env.npm_config_user_agent);
-  const pkgManager = pkgInfo ? pkgInfo.name : "npm";
-
+  const pkgManager = pkgInfo ? pkgInfo.name : 'npm';
 
   console.log(`\nDone. Now run:\n`);
   if (root !== cwd) {
     console.log(`  cd ${path.relative(cwd, root)}`);
   }
   switch (pkgManager) {
-    case "yarn":
-      console.log("  yarn");
-      console.log("  yarn dev");
+    case 'yarn':
+      console.log('  yarn');
+      console.log('  yarn dev');
       break;
     default:
       console.log(`  ${pkgManager} install`);
@@ -205,18 +198,16 @@ function copy(src, dest) {
 }
 
 function isValidPackageName(projectName) {
-  return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(
-    projectName
-  );
+  return /^(?:@[a-z0-9-*~][a-z0-9-*._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/.test(projectName);
 }
 
 function toValidPackageName(projectName) {
   return projectName
     .trim()
     .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/^[._]/, "")
-    .replace(/[^a-z0-9-~]+/g, "-");
+    .replace(/\s+/g, '-')
+    .replace(/^[._]/, '')
+    .replace(/[^a-z0-9-~]+/g, '-');
 }
 
 function copyDir(srcDir, destDir) {
@@ -254,8 +245,8 @@ function emptyDir(dir) {
  */
 function pkgFromUserAgent(userAgent) {
   if (!userAgent) return undefined;
-  const pkgSpec = userAgent.split(" ")[0];
-  const pkgSpecArr = pkgSpec.split("/");
+  const pkgSpec = userAgent.split(' ')[0];
+  const pkgSpecArr = pkgSpec.split('/');
   return {
     name: pkgSpecArr[0],
     version: pkgSpecArr[1],

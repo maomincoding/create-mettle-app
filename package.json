@@ -1,38 +1,38 @@
 {
   "name": "create-amazed-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "maomincoding",
   "bin": {
-    "create-strve-app": "index.js",
+    "create-amazed-app": "index.js",
     "cs-app": "index.js"
   },
   "main": "index.js",
   "private": false,
   "keywords": [
-    "strve",
-    "strvejs",
-    "strve-js",
+    "amazed",
+    "amazedjs",
+    "amazed-js",
     "dom",
     "mvvm",
     "virtual dom",
     "html",
     "template",
     "string",
-    "create-strve",
-    "create-strve-app"
+    "create-amazed",
+    "create-amazed-app"
   ],
   "engines": {
     "node": ">=12.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strveJs/create-strve-app"
+    "url": "https://github.com/maomincoding/create-amazed-app"
   },
   "bugs": {
-    "url": "https://github.com/strveJs/create-strve-app/issues"
+    "url": "https://github.com/maomincoding/create-amazed-app/issues"
   },
-  "homepage": "https://github.com/strveJs/create-strve-app#readme",
+  "homepage": "https://github.com/maomincoding/create-amazed-app#readme",
   "dependencies": {
     "kolorist": "^1.5.0",
     "minimist": "^1.2.5",
