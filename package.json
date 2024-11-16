@@ -1,6 +1,6 @@
 {
-  "name": "create-amazed-app",
-  "version": "0.0.2",
+  "name": "create-mettle-app",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "maomincoding",
   "bin": {
