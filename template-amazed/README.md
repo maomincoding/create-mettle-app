@@ -1,1 +1,1 @@
-# template-strve
+# template-amazed

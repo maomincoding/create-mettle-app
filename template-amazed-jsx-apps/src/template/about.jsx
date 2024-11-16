@@ -1,5 +1,5 @@
-import { defineComponent } from 'strve-js';
-import { linkTo, toParse } from 'strve-router';
+import { defineComponent } from 'amazed';
+import { linkTo, toParse } from 'amazed-router';
 
 const about = () =>
   defineComponent(() => {

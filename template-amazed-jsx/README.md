@@ -1,1 +1,1 @@
-# template-strve-jsx
+# template-amazed-jsx

@@ -1,4 +1,4 @@
-import { defineComponent } from 'strve-js';
+import { defineComponent } from 'amazed';
 
 const Home = defineComponent(({ setData }) => {
   let count = 0;

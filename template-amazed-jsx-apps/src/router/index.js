@@ -1,5 +1,5 @@
-import { resetView } from 'strve-js';
-import { initRouter } from 'strve-router';
+import { resetView } from 'amazed';
+import { initRouter } from 'amazed-router';
 
 import home from '../template/home';
 import about from '../template/about';

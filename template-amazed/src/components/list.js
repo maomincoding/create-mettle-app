@@ -1,4 +1,4 @@
-import { defineComponent } from 'strve-js';
+import { defineComponent } from 'amazed';
 import style from '../style/list.module.css';
 
 const List = defineComponent(({ setData }) => {

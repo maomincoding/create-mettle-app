@@ -1,9 +1,8 @@
-import { defineComponent } from 'strve-js';
-import { linkTo, toParse } from 'strve-router';
+import { defineComponent } from 'amazed';
+import { linkTo, toParse } from 'amazed-router';
 
-const about = () => defineComponent(
-  () => {
-
+const about = () =>
+  defineComponent(() => {
     function goHome() {
       linkTo({
         path: '/',
@@ -15,13 +14,10 @@ const about = () => defineComponent(
     }
 
     return () => html`
-     <fragment>
+      <fragment>
         <button onClick=${goHome}>goHome</button>
         <h1 onClick=${getOption}>About</h1>
       </fragment>
     `;
-  }
-)
-  ;
-
-export default about
+  });
+export default about;

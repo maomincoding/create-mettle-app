@@ -1,5 +1,5 @@
 {
-  "name": "template-strve-apps",
+  "name": "template-amazed-apps",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -9,12 +9,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.7",
-    "babel-plugin-strve": "^2.1.0",
+    "babel-plugin-amazed": "^0.0.3",
     "vite": "^4.0.0",
     "vite-plugin-babel": "^1.1.3"
   },
   "dependencies": {
-    "strve-js": "^6.8.0",
-    "strve-router": "^5.6.0"
+    "amazed": "^0.0.2",
+    "amazed-router": "^0.0.4"
   }
 }

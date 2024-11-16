@@ -1,3 +1,3 @@
 module.exports = {
-	'plugins': [['babel-plugin-strve']],
+  plugins: [['babel-plugin-amazed']],
 };

@@ -1,6 +1,5 @@
-import { defineComponent } from 'strve-js';
-import { linkTo } from 'strve-router';
-import logo from '../assets/logo.png';
+import { defineComponent } from 'amazed';
+import { linkTo } from 'amazed-router';
 
 const home = () =>
   defineComponent(({ setData }) => {
@@ -32,9 +31,6 @@ const home = () =>
       <fragment>
         <button onClick={goAbout}>goAbout</button>
         <h1>Home</h1>
-        <div class='logo-inner'>
-          <img src={logo} class='logo' />
-        </div>
         <p onClick={useChange}>{state.msg}</p>
         <ul>
           {state.arr.map((item) => (

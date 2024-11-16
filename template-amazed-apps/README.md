@@ -1,1 +1,1 @@
-# template-strve-apps
+# template-amazed-apps
