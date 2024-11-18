@@ -1,30 +1,30 @@
-# Create-amazed-app
+# Create-mettle-app
 
-A set of fast building amazed.js project command line tool.
+A set of fast building mettle.js project command line tool.
 
-## Scaffolding Your First Amazed Project
+## Scaffolding Your First Mettle Project
 
 **NPM**
 
 ```bash
-npm create amazed-app@latest
+npm create mettle-app@latest
 ```
 
 **Yarn**
 
 ```bash
-yarn create amazed-app
+yarn create mettle-app
 ```
 
 **PNPM**
 
 ```bash
-pnpm create amazed-app
+pnpm create mettle-app
 ```
 
 ## Documentation
 
-To learn more about create-amazed-app, check [its documentation](https://maomincoding.github.io/amazed-doc/tool/createAmazedApp/).
+To learn more about `create-mettle-app`, check [its documentation](https://maomincoding.github.io/mettle-doc/tool/createMettleApp/).
 
 ## License
 

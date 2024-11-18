@@ -10,26 +10,26 @@ const cwd = process.cwd();
 
 const FRAMEWORKS = [
   {
-    name: 'create-amazed-app',
+    name: 'create-mettle-app',
     color: yellow,
     variants: [
       {
-        name: 'amazed',
+        name: 'mettle',
         display: 'JavaScript',
         color: lightYellow,
       },
       {
-        name: 'amazed-apps',
+        name: 'mettle-apps',
         display: 'JavaScript',
         color: lightYellow,
       },
       {
-        name: 'amazed-jsx',
+        name: 'mettle-jsx',
         display: 'JavaScript',
         color: cyan,
       },
       {
-        name: 'amazed-jsx-apps',
+        name: 'mettle-jsx-apps',
         display: 'JavaScript',
         color: cyan,
       },
@@ -49,7 +49,7 @@ async function init() {
   let targetDir = argv._[0];
   let template = argv.template || argv.t;
 
-  const defaultProjectName = !targetDir ? 'amazed-project' : targetDir;
+  const defaultProjectName = !targetDir ? 'mettle-project' : targetDir;
 
   let result = {};
 

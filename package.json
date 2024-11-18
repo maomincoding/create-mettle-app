@@ -1,38 +1,38 @@
 {
   "name": "create-mettle-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "author": "maomincoding",
   "bin": {
-    "create-amazed-app": "index.js",
+    "create-mettle-app": "index.js",
     "cs-app": "index.js"
   },
   "main": "index.js",
   "private": false,
   "keywords": [
-    "amazed",
-    "amazedjs",
-    "amazed-js",
+    "mettle",
+    "mettlejs",
+    "mettle-js",
     "dom",
     "mvvm",
     "virtual dom",
     "html",
     "template",
     "string",
-    "create-amazed",
-    "create-amazed-app"
+    "create-mettle",
+    "create-mettle-app"
   ],
   "engines": {
     "node": ">=12.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/maomincoding/create-amazed-app"
+    "url": "https://github.com/maomincoding/create-mettle-app"
   },
   "bugs": {
-    "url": "https://github.com/maomincoding/create-amazed-app/issues"
+    "url": "https://github.com/maomincoding/create-mettle-app/issues"
   },
-  "homepage": "https://github.com/maomincoding/create-amazed-app#readme",
+  "homepage": "https://github.com/maomincoding/create-mettle-app#readme",
   "dependencies": {
     "kolorist": "^1.5.0",
     "minimist": "^1.2.5",
