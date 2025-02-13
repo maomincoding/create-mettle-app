@@ -33,6 +33,16 @@ const FRAMEWORKS = [
         display: 'JavaScript',
         color: cyan,
       },
+      {
+        name: 'mettle-tsx',
+        display: 'TypeScript',
+        color: blue,
+      },
+      {
+        name: 'mettle-tsx-apps',
+        display: 'TypeScript',
+        color: blue,
+      },
     ],
   },
 ];
