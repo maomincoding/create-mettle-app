@@ -1,0 +1,14 @@
+p {
+  color: #c6715b;
+}
+
+.inner {
+  text-align: center;
+}
+
+.app-tool {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px dotted #c6715b;
+}
