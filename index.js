@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2), { string: ['_'] });
 const prompts = require('prompts');
-const { yellow, red, lightYellow, cyan } = require('kolorist');
+const { yellow, red, lightYellow, cyan, blue } = require('kolorist');
 
 const cwd = process.cwd();
 
