@@ -1,8 +1,9 @@
 import { defineComponent } from 'mettle';
 import { linkTo } from 'mettle-router';
+import type { OptionsProps } from 'mettle';
 
 const home = () =>
-  defineComponent(({ setData }) => {
+  defineComponent(({ setData }:OptionsProps) => {
     const state = {
       msg: 'hello',
       arr: [1, 2],
