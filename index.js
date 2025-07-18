@@ -16,30 +16,20 @@ const FRAMEWORKS = [
       {
         name: 'mettle',
         display: 'JavaScript',
-        color: lightYellow,
+        color: cyan,
       },
       {
         name: 'mettle-apps',
         display: 'JavaScript',
-        color: lightYellow,
-      },
-      {
-        name: 'mettle-jsx',
-        display: 'JavaScript',
         color: cyan,
       },
       {
-        name: 'mettle-jsx-apps',
-        display: 'JavaScript',
-        color: cyan,
-      },
-      {
-        name: 'mettle-tsx',
+        name: 'mettle-ts',
         display: 'TypeScript',
         color: blue,
       },
       {
-        name: 'mettle-tsx-apps',
+        name: 'mettle-apps-ts',
         display: 'TypeScript',
         color: blue,
       },

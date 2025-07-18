@@ -1,1 +1,0 @@
-# template-mettle-tsx-apps
