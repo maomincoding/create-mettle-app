@@ -12,6 +12,6 @@
     "vite-plugin-mettle": "^1.0.0"
   },
   "dependencies": {
-    "mettle": "^1.0.1"
+    "mettle": "^1.1.0"
   }
 }
