@@ -1,27 +1,24 @@
 import style from '../style/list.module.css';
 
-export default function List({ setData }:any) {
+export default function List({ setData }: any) {
   const listState = {
     arr: [1, 2],
   };
   let count = 3;
 
   function usePush() {
-    setData(() => {
-      listState.arr.push(count++);
-    });
+    listState.arr.push(count++);
+    setData();
   }
 
   function useUnshift() {
-    setData(() => {
-      listState.arr.unshift(count++);
-    });
+    listState.arr.unshift(count++);
+    setData();
   }
 
   function useDel() {
-    setData(() => {
-      listState.arr.splice(1, 1);
-    });
+    listState.arr.splice(1, 1);
+    setData();
   }
 
   return () => (

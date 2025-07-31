@@ -18,11 +18,10 @@ export default function Home({ setData }) {
   }
 
   function useChange() {
-    setData(() => {
-      state.msg = 'world';
-      state.count++;
-      state.arr.unshift(state.count);
-    });
+    state.msg = 'world';
+    state.count++;
+    state.arr.unshift(state.count);
+    setData();
   }
 
   return () => (

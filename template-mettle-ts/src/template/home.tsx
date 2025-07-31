@@ -1,10 +1,9 @@
-export default function Home({ setData }:any) {
+export default function Home({ setData }: any) {
   let count = 0;
 
   function add() {
-    setData(() => {
-      count++;
-    });
+    count++;
+    setData();
   }
   return () => (
     <fragment>

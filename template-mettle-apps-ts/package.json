@@ -13,7 +13,7 @@
     "vite-plugin-mettle": "^1.0.0"
   },
   "dependencies": {
-    "mettle": "^1.1.0",
+    "mettle": "^1.1.2",
     "mettle-router": "^0.6.0"
   }
 }

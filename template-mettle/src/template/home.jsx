@@ -2,9 +2,8 @@ export default function Home({ setData }) {
   let count = 0;
 
   function add() {
-    setData(() => {
-      count++;
-    });
+    count++;
+    setData();
   }
   return () => (
     <fragment>

@@ -7,21 +7,18 @@ export default function List({ setData }) {
   let count = 3;
 
   function usePush() {
-    setData(() => {
-      listState.arr.push(count++);
-    });
+    listState.arr.push(count++);
+    setData();
   }
 
   function useUnshift() {
-    setData(() => {
-      listState.arr.unshift(count++);
-    });
+    listState.arr.unshift(count++);
+    setData();
   }
 
   function useDel() {
-    setData(() => {
-      listState.arr.splice(1, 1);
-    });
+    listState.arr.splice(1, 1);
+    setData();
   }
 
   return () => (

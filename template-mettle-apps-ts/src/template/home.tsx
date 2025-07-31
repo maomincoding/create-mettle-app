@@ -1,6 +1,6 @@
 import { linkTo } from 'mettle-router';
 
-export default function Home({ setData }:any) {
+export default function Home({ setData }: any) {
   const state = {
     msg: 'hello',
     arr: [1, 2],
@@ -18,11 +18,10 @@ export default function Home({ setData }:any) {
   }
 
   function useChange() {
-    setData(() => {
-      state.msg = 'world';
-      state.count++;
-      state.arr.unshift(state.count);
-    });
+    state.msg = 'world';
+    state.count++;
+    state.arr.unshift(state.count);
+    setData();
   }
 
   return () => (
