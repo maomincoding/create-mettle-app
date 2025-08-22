@@ -1,7 +1,7 @@
 import { signal } from 'mettle';
 
 export default function Home() {
-  const count: number = signal(0);
+  const count: any = signal(0);
 
   function add() {
     count.value++;
