@@ -1,8 +1,5 @@
-import { signal as signalUntyped, produce as produceUntyped } from 'mettle';
+import { signal, produce } from 'mettle';
 import style from '../style/list.module.css';
-
-const signal = signalUntyped as any;
-const produce = produceUntyped as any;
 
 export default function List() {
   const arr = signal([1, 2]);

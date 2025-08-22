@@ -1,9 +1,7 @@
-import { signal as signalUntyped } from 'mettle';
-
-const signal = signalUntyped as any;
+import { signal } from 'mettle';
 
 export default function Home() {
-  const count = signal(0);
+  const count: number = signal(0);
 
   function add() {
     count.value++;

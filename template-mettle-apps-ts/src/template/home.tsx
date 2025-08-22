@@ -1,14 +1,5 @@
-import {
-  signal as signalUntyped,
-  produce as produceUntyped,
-  batch,
-  computed as computedUntyped,
-} from 'mettle';
+import { signal, produce, batch, computed } from 'mettle';
 import { linkTo } from 'mettle-router';
-
-const signal = signalUntyped as any;
-const produce = produceUntyped as any;
-const computed = computedUntyped as any;
 
 export default function Home() {
   const msg = signal('hello');
