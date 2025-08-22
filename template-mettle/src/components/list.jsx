@@ -1,27 +1,29 @@
+import { signal, produce } from 'mettle';
 import style from '../style/list.module.css';
 
-export default function List({ setData }) {
-  const listState = {
-    arr: [1, 2],
-  };
-  let count = 3;
+export default function List() {
+  const arr = signal([1, 2]);
+  const count = signal(3);
 
   function usePush() {
-    listState.arr.push(count++);
-    setData();
+    arr.value = produce(arr.value, (draft) => {
+      draft.push(count.value++);
+    });
   }
 
   function useUnshift() {
-    listState.arr.unshift(count++);
-    setData();
+    arr.value = produce(arr.value, (draft) => {
+      draft.unshift(count.value++);
+    });
   }
 
   function useDel() {
-    listState.arr.splice(1, 1);
-    setData();
+    arr.value = produce(arr.value, (draft) => {
+      draft.splice(1, 1);
+    });
   }
 
-  return () => (
+  return (
     <fragment>
       <div class={style.listInner}>
         <button onClick={useUnshift}>Unshift</button>
@@ -29,7 +31,7 @@ export default function List({ setData }) {
         <button onClick={useDel}>Del</button>
       </div>
       <ul class={style.listInner}>
-        {listState.arr.map((item) => (
+        {arr.value.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>

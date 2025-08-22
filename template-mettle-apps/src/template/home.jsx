@@ -1,11 +1,10 @@
+import { signal, produce, batch, computed } from 'mettle';
 import { linkTo } from 'mettle-router';
 
-export default function Home({ setData }) {
-  const state = {
-    msg: 'hello',
-    arr: [1, 2],
-    count: 3,
-  };
+export default function Home() {
+  const msg = signal('hello');
+  const arr = signal([1, 2]);
+  const count = signal(3);
 
   function goAbout() {
     linkTo({
@@ -18,22 +17,23 @@ export default function Home({ setData }) {
   }
 
   function useChange() {
-    state.msg = 'world';
-    state.count++;
-    state.arr.unshift(state.count);
-    setData();
+    batch(() => {
+      msg.value = 'world';
+      count.value++;
+      arr.value = produce(arr.value, (draft) => {
+        draft.unshift(count.value);
+      });
+    });
   }
 
-  return () => (
+  const list = computed(() => arr.value.map((item) => <li key={item}>{item}</li>));
+
+  return (
     <fragment>
       <button onClick={goAbout}>goAbout</button>
       <h1>Home</h1>
-      <p onClick={useChange}>{state.msg}</p>
-      <ul>
-        {state.arr.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+      <p onClick={useChange}>{msg}</p>
+      <ul>{list}</ul>
     </fragment>
   );
 }

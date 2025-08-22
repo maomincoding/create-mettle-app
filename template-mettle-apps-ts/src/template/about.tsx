@@ -11,7 +11,7 @@ export default function About() {
     console.log(toParse());
   }
 
-  return () => (
+  return (
     <fragment>
       <button onClick={goHome}>goHome</button>
       <h1 onClick={getOption}>About</h1>

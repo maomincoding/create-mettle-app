@@ -1,11 +1,14 @@
-export default function Home({ setData }: any) {
-  let count = 0;
+import { signal as signalUntyped } from 'mettle';
+
+const signal = signalUntyped as any;
+
+export default function Home() {
+  const count = signal(0);
 
   function add() {
-    count++;
-    setData();
+    count.value++;
   }
-  return () => (
+  return (
     <fragment>
       <button onClick={add}>Add</button>
       <h1>{count}</h1>
