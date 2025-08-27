@@ -24,7 +24,7 @@ export default function List() {
   }
 
   return (
-    <fragment>
+    <>
       <div class={style.listInner}>
         <button onClick={useUnshift}>Unshift</button>
         <button onClick={usePush}>Push</button>
@@ -35,6 +35,6 @@ export default function List() {
           <li key={item}>{item}</li>
         ))}
       </ul>
-    </fragment>
+    </>
   );
 }

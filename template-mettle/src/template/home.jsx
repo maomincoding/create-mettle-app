@@ -7,10 +7,10 @@ export default function Home() {
     count.value++;
   }
   return (
-    <fragment>
+    <>
       <button onClick={add}>Add</button>
       <h1>{count}</h1>
       <input value={count} />
-    </fragment>
+    </>
   );
 }

@@ -24,17 +24,17 @@ export default function List() {
   }
 
   return (
-    <fragment>
+    <>
       <div class={style.listInner}>
         <button onClick={useUnshift}>Unshift</button>
         <button onClick={usePush}>Push</button>
         <button onClick={useDel}>Del</button>
       </div>
       <ul class={style.listInner}>
-        {arr.value.map((item) => (
+        {arr.map((item) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
-    </fragment>
+    </>
   );
 }

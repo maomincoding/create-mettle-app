@@ -12,9 +12,9 @@ export default function About() {
   }
 
   return (
-    <fragment>
+    <>
       <button onClick={goHome}>goHome</button>
       <h1 onClick={getOption}>About</h1>
-    </fragment>
+    </>
   );
 }

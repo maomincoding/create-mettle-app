@@ -29,11 +29,11 @@ export default function Home() {
   const list = computed(() => arr.value.map((item) => <li key={item}>{item}</li>));
 
   return (
-    <fragment>
+    <>
       <button onClick={goAbout}>goAbout</button>
       <h1>Home</h1>
       <p onClick={useChange}>{msg}</p>
       <ul>{list}</ul>
-    </fragment>
+    </>
   );
 }
