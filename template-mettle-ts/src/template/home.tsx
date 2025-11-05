@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <>
       <button onClick={add}>Add</button>
-      <h1>{count}</h1>
-      <input value={count} />
+      <h1>{count.value}</h1>
+      <input value={count.value} />
     </>
   );
 }

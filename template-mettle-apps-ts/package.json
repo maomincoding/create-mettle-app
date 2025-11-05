@@ -10,7 +10,7 @@
   "devDependencies": {
     "typescript": "~5.7.2",
     "vite": "^6.1.0",
-    "vite-plugin-mettle": "^1.7.3",
+    "vite-plugin-mettle": "^1.7.5",
     "mettle-jsx-runtime": "^1.1.0"
   },
   "dependencies": {

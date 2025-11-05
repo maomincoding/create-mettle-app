@@ -31,7 +31,7 @@ export default function List() {
         <button onClick={useDel}>Del</button>
       </div>
       <ul class={style.listInner}>
-        {arr.map((item: any) => (
+        {arr.value.map((item: any) => (
           <li key={item}>{item}</li>
         ))}
       </ul>
