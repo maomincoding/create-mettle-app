@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "mettle": "^1.7.1",
-    "mettle-router": "^0.6.1"
+    "mettle-router": "^0.6.2"
   }
 }
