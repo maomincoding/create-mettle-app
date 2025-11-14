@@ -32,8 +32,8 @@ export default function Home() {
     <>
       <button onClick={goAbout}>goAbout</button>
       <h1>Home</h1>
-      <p onClick={useChange}>{msg}</p>
-      <ul>{list}</ul>
+      <p onClick={useChange}>{msg.value}</p>
+      <ul>{list.value}</ul>
     </>
   );
 }
