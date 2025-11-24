@@ -9,11 +9,11 @@
   },
   "devDependencies": {
     "vite": "^6.1.0",
-    "vite-plugin-mettle": "^1.7.7",
+    "vite-plugin-mettle": "^1.7.8",
     "mettle-jsx-runtime": "^1.1.0"
   },
   "dependencies": {
-    "mettle": "^1.7.3",
+    "mettle": "^1.7.5",
     "mettle-router": "^0.6.2"
   }
 }
