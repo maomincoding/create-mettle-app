@@ -9,10 +9,10 @@
   },
   "devDependencies": {
     "vite": "^6.1.0",
-    "vite-plugin-mettle": "^1.7.6",
+    "vite-plugin-mettle": "^1.7.7",
     "mettle-jsx-runtime": "^1.1.0"
   },
   "dependencies": {
-    "mettle": "^1.7.1"
+    "mettle": "^1.7.3"
   }
 }
