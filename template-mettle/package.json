@@ -13,6 +13,6 @@
     "mettle-jsx-runtime": "^1.2.0"
   },
   "dependencies": {
-    "mettle": "^1.7.5"
+    "mettle": "^1.7.6"
   }
 }
