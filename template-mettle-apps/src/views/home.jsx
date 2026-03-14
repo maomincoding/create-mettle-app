@@ -1,9 +1,8 @@
-import { signal, batch } from 'mettle';
+import { signal } from 'mettle';
 import { linkTo } from 'mettle-router';
 
 export default function Home() {
   const msg = signal('hello');
-  const count = signal(3);
 
   function goAbout() {
     linkTo({
@@ -16,10 +15,7 @@ export default function Home() {
   }
 
   function useChange() {
-    batch(() => {
-      msg.value = 'world';
-      count.value++;
-    });
+    msg.value = 'world';
   }
 
   return (
