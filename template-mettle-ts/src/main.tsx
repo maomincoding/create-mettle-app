@@ -1,6 +1,5 @@
 import { createApp } from 'mettle';
-import Home from './template/home';
-import List from './components/list';
+import Home from './views/home';
 import './style/app.css';
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
       <h1>Hello mettle.js</h1>
       <div class='app-tool'>
         <Home />
-        <List />
       </div>
     </div>
   );
