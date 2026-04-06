@@ -1,16 +1,14 @@
-import { signal } from 'mettle';
-
 export default function Home() {
-  const count = signal(0);
+  let count = $signal(0);
 
   function add() {
-    count.value++;
+    count++;
   }
   return (
     <>
       <button onClick={add}>Add</button>
-      <h1>{count.value}</h1>
-      <input value={count.value} />
+      <h1>{count}</h1>
+      <input value={count} />
     </>
   );
 }

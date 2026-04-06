@@ -1,8 +1,7 @@
-import { signal } from 'mettle';
 import { linkTo } from 'mettle-router';
 
 export default function Home() {
-  const msg = signal('hello');
+  let msg = $signal('hello');
 
   function goAbout() {
     linkTo({
@@ -15,14 +14,14 @@ export default function Home() {
   }
 
   function useChange() {
-    msg.value = 'world';
+    msg = 'world';
   }
 
   return (
     <>
       <button onClick={goAbout}>goAbout</button>
       <h1>Home</h1>
-      <p onClick={useChange}>{msg.value}</p>
+      <p onClick={useChange}>{msg}</p>
     </>
   );
 }
